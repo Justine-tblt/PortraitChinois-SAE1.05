@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portrait Chinois</title>
+
+</head>
+
+<body>
+    <div class="cloud">
+        <img src="images/cloud.webp" alt="Il s'agit d'un nuage">
+    </div>
+    <div class="cloud2">
+        <img src="images/cloud.webp" alt="Il s'agit d'un nuage">
+    </div>
+    <div class="cloud3">
+        <img src="images/cloud.webp" alt="Il s'agit d'un nuage">
+    </div>
+    
+    <!--Il s'agit de la page d'accueil du site-->
+    <section id="one">
+        <div class="introduction">
+
+            <div class="home">
+                <ul>
+                    <li><a href="#one"><i class="fa-solid fa-house"></i></a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#two">Présentation</a></li>
+                    <li><a href="#analogie0">Analogies</a></li>
+                    <li class="Mentions">Mentions légales</li>
+                </ul>
+
+            </nav>
+
+            <!--Il s'agit de la fenêtre des mentions légales-->
+            <div class="popup popup-invisible">
+                <p>
+                    MENTIONS LÉGALES <br><br>
+
+                    Éditrice: Justine THEBAULT, étudiante en BUT MMI<br><br>
+
+                    Dispositions légales: projet universitaire <br><br>
+
+                    Hébergeur: Université Gustave Eiffel - Champs-sur-Marne <br><br>
+
+                    Sources des images: <br>
+                    <a href="https://storyset.com/illustration/discovery/rafiki">Présentation</a>
+                    <a href="https://storyset.com/illustration/sport-family/amico">Activité</a> 
+                    <a href="https://storyset.com/illustration/journey/amico">Pays</a>
+                    <a href="https://storyset.com/illustration/fruit-basket/rafiki">Fruit</a>
+                    <a href="https://storyset.com/illustration/relaxation/bro">Saison</a>
+                    <a href="https://storyset.com/illustration/video-tutorial/rafiki">Application</a>
+                    <a href="https://storyset.com/illustration/designer-girl/bro">Métier</a>
+                    <a href="https://storyset.com/illustration/music/bro">Musique</a>
+                    <br><br>
+
+                    <button class="cache-fenetre">Fermer</button>
+                </p>
+
+            </div>
+
+            <!--Il s'agit du titre "mon portrait chinois"-->
+            <h1><span class="outline neon">&nbsp;M</span><span class="outline neon">O</span><span class="outline neon">N</span><span
+                    class="outline neon">&nbsp;P</span><span class="outline neon">O</span><span class="outline neon">R</span><span
+                    class="outline neon">T</span><span class="outline neon">R</span><span class="outline neon">A</span><span
+                    class="outline neon">I</span><span class="outline neon">T</span>
+                <span class="outline neon2">C</span><span class="outline neon2">H</span><span
+                    class="outline neon2">I</span><span class="outline neon2">N</span><span
+                    class="outline neon2">O</span><span class="outline neon2">I</span><span
+                    class="outline neon2">S</span>
+            </h1>
+
+
+            <!--Il s'agit du texte d'indications de navigation-->
+            <p class="navig">Vous pouvez glisser vers le haut/bas pour naviguer ou utiliser les flèches du clavier.</p>
+ 
+
+            <!--Il s'agit du bouton présent en bas de la page d'accueil-->
+            <div class="Bouton">
+                <h2><a href="#two"><i class="fa-solid fa-arrow-down"></i> Découvrir <i class="fa-solid fa-arrow-down"></i></a></h2>
+            </div>
+
+        </div>
+
+    <!--Il s'agit de la page présentation du site-->
+    </section>
+    <section id="two">
+        <div class="profil">
+            <h2>Présentation</h2>
+            <img src="Images/Profil.png" alt="Une femme observe les planètes à l'aide d'un télescope.">
+            <p>
+                Je m'appelle Justine Thebault et je suis étudiante en BUT MMI. <br>
+                Ce portrait chinois peut être considéré comme un CV interactif afin de vous permettre de me découvrir d’une façon originale et visuelle.
+            </p>
+            
+        </div>
+    </section>
+    </div>
+
+    <!-- Liste d'analogies -->
+    <div class="listAnalogies"></div>
+
+    <!-- Il s'agit de la partie du formulaire -->
+    <section class="formulaire">
+
+        <form>
+            <h2>Création de votre analogie</h2>
+            <div class="ligne"></div>
+            <div class="données-formulaire">
+                <div class="gauche">
+                    <div class="groupe">
+                        <label>Votre analogie</label>
+                        <input type="text" id ="analogies" placeholder="exemple: un animal" required>
+                      
+                    </div>
+                    <div class="groupe">
+                        <label>Votre réponse</label>
+                        <input type="text" id="valeurAnalogies" placeholder="exemple: un chat" required>
+                       
+                    </div>
+                    <div class="groupe">
+                        <label>Le lien de votre image</label>
+                        <input type="text" id="imageAnalogies" placeholder="URL" required>
+                       
+                    </div>
+
+                </div>
+                <div class="droite">
+
+                    <div class="groupe">
+                        <label>Votre justification</label>
+                        <textarea id="explicationAnalogies"  cols="30" rows="10" placeholder="car ..."></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="pied-formulaire" >
+                <button id="submit">Voir mon analogie</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Analogies faites par les internautes -->
+    <div class="analogiesFormulaire"></div>
+
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

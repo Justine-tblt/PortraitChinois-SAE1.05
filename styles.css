@@ -1,0 +1,570 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+        margin: 0px;
+
+}
+
+/*--------------------------------------------*/
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+
+/*--------------------------------------------*/
+.cloud {
+    position: fixed;
+    transform: translate(-50%,-50%) scale(2);
+}
+.cloud2{
+    position: fixed;
+    transform: translate(-50%,-50%) scale(2) ;
+    right: -10%;
+}
+.cloud3{
+    position: fixed;
+    transform: translate(-50%,-50%) scale(2) ;
+    right: -10%;
+    bottom: -10%;
+
+}
+.introduction {
+    height: 100vh;
+    background-color:#87CEFA ; 
+}
+
+
+.introduction h1 {
+    position: relative;
+    transform: translate(-50%,-50%);
+    top: 30%;
+    left: 20%;
+    color: white;
+    font-size: 5rem;
+    margin: 0;
+    text-align: center;
+    padding: 40px;
+    max-width: 60vw;
+    background-image: url(images/cloud.webp), url(images/cloud.webp), url(images/cloud.webp);
+    background-position:5% 50% ,100% 10%, 50% 100%;
+    background-size: 10% ,15%, 15%;
+    background-repeat: no-repeat;
+    animation: float 4s alternate infinite ease-in-out;
+}
+
+/*TITRE*/
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+@keyframes floatBottom {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+@keyframes glow {
+    0% {
+        text-shadow:
+            0 0 8px #fff,
+            0 0 16px #00BFFF,
+            0 0 32px #00BFFF,
+            0 0 64px #00BFFF,
+            0 0 128px #00BFFF;
+    }
+
+    100% {
+        text-shadow:
+            0 0 16px #fff,
+            0 0 32px #00BFFF,
+            0 0 64px #00BFFF,
+            0 0 128px #00BFFF,
+            0 0 256px #00BFFF;
+    }
+}
+
+
+.neon {
+    transition: 1s;
+}
+
+.neon2 {
+    transition: 1s all;
+}
+
+.neon2:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+    color: unset;
+}
+
+.outline {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    color: rgba(0, 0, 0, 0.0);
+
+}
+.outline:hover {
+    color: unset;
+}
+
+.neon:hover {
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+/*Texte d'indications de navigation*/
+.navig {
+        position: relative;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+        color: white;
+        font-size: 1rem;
+        text-align: center;
+}
+
+/*ZONE DE NAVIGATION*/
+
+nav {
+    position: fixed;
+    top: 10%;
+    transform: translateY(-50%);
+    height: auto;
+    z-index: 6;
+}
+nav ul {
+    border-top-right-radius:25px ;
+    border-bottom-right-radius:25px ;
+    background-color: rgba(120, 120, 120, 0.607);
+    padding: 20px;
+    padding-left: 35px;
+    font-size: 1.225rem;
+    align-items: center;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    border: 3px solid inset;
+}
+nav ul:hover {
+    border: white solid 3px;
+    border-left:none ;
+}
+nav li {
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    border-radius: 25px;
+}
+nav li:hover{
+    cursor: default;
+    color: black;
+    background-color: #fff;
+    border-radius: 10px;
+    
+}
+
+
+/*BOUTON POUR REMONTER LA PAGE*/
+
+.home {
+    position: fixed;
+    bottom: 5%;
+    right:5%;
+    height: auto;
+    z-index: 6;
+}
+.home ul {
+    font-size: 2rem;
+    margin: 0px;
+    list-style: none;
+}
+.home li {
+    color: rgba(120, 120, 120, 0.607);
+    padding: 10px;
+    transition: 0.5s;
+}
+.home li:hover {
+    cursor: default;
+    color: #000;
+}
+
+
+/*BOUTON PAGE D'ACCUEIL*/
+
+.Bouton{
+    width: fit-content;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+.Bouton h2 {
+    background-color: rgba(182, 182, 182, 0.2);
+    min-width: 400px;
+    border-radius: 10px;
+    color: white;
+    margin: 50px;
+    text-align: center;
+    border: solid 3px white;
+    width: 17%;
+    padding: 10px;
+    transition: 1s;
+
+}
+
+.Bouton h2:hover {
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+    cursor: default;
+}
+
+
+/*POP UP DES MENTIONS LÉGALES*/
+
+.popup {
+    background-color: rgba(182, 182, 182, 0.5);
+    color: white;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1000;
+    margin: auto;
+}
+.cachefenetre {
+    color: white;
+    position: relative;
+    top: 0;
+}
+.popup p {
+    box-shadow: 15px 15px 3px 3px #003cff ;
+    background-color: #242424;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: auto;
+    max-width: 800px;
+    font-size: 1.125rem;
+    height: fit-content;
+    padding: 30px;
+    border-radius: 15px;
+
+
+}
+.popup a {
+    text-decoration: underline;
+}
+.cache-fenetre {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1.5rem;
+    background-color: inherit;
+    border: inherit;
+}
+.cache-fenetre:hover{
+    border-bottom: #003cff solid 3px;
+}
+
+.popup-visible {
+    display: block;
+    margin: auto;
+}
+
+.popup-invisible {
+    display: none;
+}
+
+#modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+
+/*PAGE DE PRÉSENTATION*/
+
+.profil {
+    height: 100vh;
+    background-color: #87CEFA;
+    color: white;
+}
+
+.profil h2 {
+    text-align: right;
+    float: right;
+    position: relative;
+    top: 30%;
+    margin-top: 0;
+    font-size: 4rem;
+    margin-right: 100px;
+}
+
+.profil p {
+    text-align: right;
+    float: right;
+    position: relative;
+    right: 0;
+    top: 20%;
+    margin-top: 60px;
+    font-size: 2rem;
+    max-width: 900px;
+    width: 70%;
+    margin-right: 80px;  
+}
+
+.profil img {
+    animation: float 4s infinite ease-in-out;
+    max-width: 600px;
+    float: left;
+    position: relative;
+    margin-left: 100px;
+    top: 20%;
+    background-color: rgba(120, 120, 120, 0.607);
+    border-radius: 50%;
+}
+
+
+/*ANALOGIES*/
+
+.analogie {
+    height: 100vh;
+    background-color: #87CEFA;
+    color: white;
+}
+
+.analogie h2 {
+    margin-top: 0;
+    padding-top: 10vh;
+    text-shadow: rgba(120, 120, 120, 0.607) 1px 0 10px;
+}
+.analogie p{
+    text-shadow: rgba(120, 120, 120, 0.607) 1px 0 10px;
+    max-width: 800px;
+}
+.analogie img {
+    border-radius: 50%;
+    max-width: 500px;
+}
+
+
+.analogie:nth-child(even) h2 {
+    position: relative;
+    top: 10%;
+    margin-top: 0;
+    font-size: 4rem;
+    margin-left: 100px;
+}
+
+.analogie:nth-child(even) p {
+    position: relative;
+    top: 10%;
+    margin-top: 60px;
+    font-size: 2rem;
+    margin-left: 80px;
+    
+}
+
+.analogie:nth-child(even) img {
+    animation: float 4s infinite ease-in-out;
+    float: right;
+    position: relative;
+    margin-right: 100px;
+    top: -10%;
+
+}
+
+.analogie:nth-child(odd) h2 {
+    text-align: right;
+    float: right;
+    position: relative;
+    top: 15%;
+    margin-top: 0;
+    font-size: 4rem;
+    margin-right: 100px;
+}
+
+.analogie:nth-child(odd) p {
+    text-align: right;
+    float: right;
+    position: relative;
+    top: 10%;
+    margin-top: 60px;
+    font-size: 2rem;
+    margin-right: 80px;
+}
+
+.analogie:nth-child(odd) img {
+
+    animation: float 4s infinite ease-in-out;
+    float: left;
+    position: relative;
+    margin-left: 100px;
+    top: 25%;
+    transform: translateY(-50%);
+}
+
+/*VALEURS ANALOGIES*/
+
+.bleu {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    color: #87CEFA;
+    text-transform: uppercase;
+}
+
+
+/*FORMULAIRE*/
+
+.formulaire {
+    height: 100vh;
+    background-color: #87CEFA;
+}
+
+form {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%) ;
+    color: white;
+    width: fit-content;
+    background-color: rgba(120, 120, 120, 0.607);
+    padding: 30px;
+    border-radius: 10px;
+
+}
+form h1 {
+    font-size: 1.75rem;
+}
+form .ligne {
+    width: 100%;
+    height: 5px;
+    background-color: #87CEFA;
+    border-radius: 2px;
+}
+form .données-formulaire {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+form .données-formulaire .groupe {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+form .données-formulaire .gauche .groupe input{
+    margin-top: 5px;
+    padding: 10px 5px 10px 30px;
+    border-radius: 5px;
+    border: inherit;
+
+}
+form .données-formulaire .gauche .groupe input:focus{
+    outline-color: #87CEFA;
+
+}
+
+form .données-formulaire .gauche .groupe i{
+    position: absolute;
+    left: 0;
+    top :25px;
+    color: #87CEFA;
+    padding: 9px 8px;
+}
+
+form .données-formulaire .droite {
+    margin-left: 40px;
+}
+form .données-formulaire .droite .groupe{
+    height: 100%;
+}
+form .données-formulaire .droite .groupe textarea{
+    margin-top: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 2px solid #87CEFA;
+    outline: none;
+    border-radius:5px ;
+    resize: none;
+    height: 83%;
+}
+form .pied-formulaire button {
+    margin-top: 10px;
+    background-color: #87CEFA;
+    color:#fff ;
+    font-size: 1.125rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius:5px ;
+    outline: none;
+    transition: transform 0.5s;
+
+}
+
+form .pied-formulaire button:hover {
+    transform: scale(1.05);
+    
+    
+}
+form .données-formulaire .droite .groupe i{
+    position: absolute;
+    left: 55%;
+
+}
+@media screen and (max-width:920px){
+    form .données-formulaire .droite {
+        margin-left: 0px;
+    }
+}
+
+/* mise en forme des champs input obligatoires */
+input:required, textarea:required{
+    outline: 3px solid #bd0101;     
+} 
+
+/* mise en forme des champs input obligatoires qui deviennent valides*/
+input:required:valid, textarea:required:valid{
+    outline: 3px solid #1a961a;
+}
